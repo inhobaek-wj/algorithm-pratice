@@ -33,6 +33,10 @@ application {
     mainClassName = 'test.App'
 }
 
+// to get system input from console when gradle run.
 run {
-   standardInput = System.in
+    standardInput = System.in
 }
+
+apply plugin: 'application'
+mainClassName = "test.Algorithm9_1"

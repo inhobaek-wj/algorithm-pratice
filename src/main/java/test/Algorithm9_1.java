@@ -8,6 +8,7 @@ import java.util.*;
 public class Algorithm9_1 {
 
     public static void main(String[] args) throws Exception {
+        System.out.println("Algorithm9_1 is start...");
 
         Scanner scanner = new Scanner(System.in);
         String teamHeorsInput = scanner.nextLine();
