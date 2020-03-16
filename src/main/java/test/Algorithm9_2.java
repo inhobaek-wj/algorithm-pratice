@@ -3,6 +3,8 @@
  */
 package test;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.*;
 
 public class Algorithm9_2 {
@@ -10,18 +12,29 @@ public class Algorithm9_2 {
     public static void main(String[] args) throws Exception {
 
         Scanner scanner = new Scanner(System.in);
-        String teamHeorsInput = scanner.nextLine();
-        String myHeorsInput = scanner.nextLine();
+        String line = scanner.nextLine();
+        double input = Double.parseDouble(line);
+        double roundedInput =
+            new BigDecimal(input).setScale(0, RoundingMode.FLOOR).doubleValue();
 
-        List<String> teamList = Arrays.asList(teamHeorsInput.split(" "));
-        Set<String> teamHeors = new HashSet<>(teamList);
+        if (roundedInput == 0) {
+            System.out.println("Yes");
+            scanner.close();
+            return;
+        } else if (roundedInput < 0) {
+            System.out.println("No");
+            scanner.close();
+            return;
+        }
 
-        List<String> myList = Arrays.asList(myHeorsInput.split(" "));
-        Set<String> myHeors = new HashSet<>(myList);
-
-        myHeors.removeAll(teamHeors);
-
-        System.out.println(myHeors.size());
+        double result = Math.log(roundedInput) / Math.log(2);
+        System.out.println(result);
+        System.out.println(new BigDecimal(result).scale());
+        if (new BigDecimal(result).scale() > 0) {
+            System.out.println("No");
+        } else {
+            System.out.println("Yes");
+        }
 
         scanner.close();
     }
