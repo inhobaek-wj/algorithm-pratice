@@ -28,8 +28,6 @@ public class Algorithm9_2 {
         }
 
         double result = Math.log(roundedInput) / Math.log(2);
-        System.out.println(result);
-        System.out.println(new BigDecimal(result).scale());
         if (new BigDecimal(result).scale() > 0) {
             System.out.println("No");
         } else {

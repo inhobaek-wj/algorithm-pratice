@@ -39,4 +39,5 @@ run {
 }
 
 apply plugin: 'application'
+
 mainClassName = "test.Algorithm9_2"
