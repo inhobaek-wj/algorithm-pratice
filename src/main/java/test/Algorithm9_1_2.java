@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.*;
 
-public class Algorithm9_2 {
+public class Algorithm9_1_2 {
 
     public static void main(String[] args) throws Exception {
 

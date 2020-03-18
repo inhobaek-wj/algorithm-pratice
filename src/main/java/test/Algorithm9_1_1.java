@@ -5,7 +5,7 @@ package test;
 
 import java.util.*;
 
-public class Algorithm9_1 {
+public class Algorithm9_1_1 {
 
     public static void main(String[] args) throws Exception {
         System.out.println("Algorithm9_1 is start...");
