@@ -40,4 +40,4 @@ run {
 
 apply plugin: 'application'
 
-mainClassName = "test.Algorithm9_1_3"
+mainClassName = "test.Algorithm9_2_1"
